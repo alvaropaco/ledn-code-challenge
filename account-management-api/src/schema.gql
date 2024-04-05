@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AccountType {
+  balance: Float!
+  createdAt: DateTime!
+  id: ID!
+  transactions: [TransactionType]
+  updatedAt: DateTime!
+  userEmail: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createAccount(balance: Float!, userEmail: String!): AccountType!
+  createTransaction(accountId: String!, amount: Float!, type: String!): TransactionType!
+}
+
+type Query {
+  getAccount(id: String!): AccountType!
+  getAllTransactions: [TransactionType!]!
+}
+
+type TransactionType {
+  account: AccountType!
+  accountId: String!
+  amount: Float!
+  createdAt: DateTime!
+  id: ID!
+  type: String!
+}

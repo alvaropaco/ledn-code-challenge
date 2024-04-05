@@ -1,0 +1,21 @@
+enum TransactionTypeEnum {
+  send
+  receive
+}
+
+type Transaction {
+  id: ID!
+  account: Account!
+  accountId: ID!
+  amount: Float!
+  type: TransactionType!
+  createdAt: String!
+}
+
+extend type Query {
+  getAllTransactions: [Transaction!]!
+}
+
+type Mutation {
+  createTransaction(accountId: ID!, amount: Float!, type: TransactionTypeEnum!): Transaction
+}
