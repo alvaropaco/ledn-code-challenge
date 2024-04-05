@@ -28,9 +28,9 @@ This project is a NestJS-based accounting management API that allows for managin
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/nestjs-banking-api.git
-cd nestjs-banking-api
-npm install
+git clone https://github.com/alvaropaco/ledn-code-challenge
+cd ledn-code-challenge
+yarn install
 ```
 
 ### Running the Application
@@ -38,13 +38,13 @@ npm install
 Start the application in development mode:
 
 ```bash
-npm run start:dev
+yarn start:dev
 ```
 
 For production mode, use:
 
 ```bash
-npm run start:prod
+yarn start:prod
 ```
 
 ## Using the API
